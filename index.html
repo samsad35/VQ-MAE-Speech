@@ -118,146 +118,157 @@
 			<hr>
 			
 			<br>
-				<div style="width:100%; text-align: justify; border: 3px dashed Red;">
-					<span style="font-size: medium; color:Red;"><a name="Visual"></a><strong><font size="+2">RATIO 50%</font></strong></span>
+				<div style="width:100%; text-align: justify; border: 0px dashed Red;">
+<!--					<span style="font-size: medium; color:Red;"><a name="Visual"></a><strong><font size="+2">RATIO 50%</font></strong></span>-->
+					<center>
+						<div style="display:grid; grid-auto-columns:1fr; gap: 15px; grid-template-columns: 1fr 0.75fr 1fr; grid-template-rows:auto;">
+							<button id="back" onclick="back()" style="border-radius: 10px; width: 500px;font-size: 25px;}">Back</button>
+							<b id="number" style="color:#5E77E7;font-size: 20px;opacity: 0.7;">Ratio 50%</b>
+							<button id="next" onclick="next()" style="border-radius: 10px; width: 500px;font-size: 25px;}">Next</button>
+						</div>
+
+					</center>
 					<table style="width:100%; text-align: center;">
 						<td>
 							<p> <font size="+2">Original</font> </p>
-							<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-							<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
+							<img id="0-img_original" src="demos/ratio-50/0-Ratio-50-original.wav.svg" alt="z_v"  width="250" />
+							<audio id="0-wav_original" style="width: 200px" controls="controls" preload="none" src="demos/ratio-50/0-Ratio-50-original.wav"></audio>
 						</td>
 
 						<td>
 							<p> <font size="+2">Masked</font> </p>
-							<img src="demos/1_sample_masked.svg" alt="z_v"  width="250" />
-							<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
+							<img id="0-img_masked" src="demos/ratio-50/0-Ratio-50-masked.wav.svg" alt="z_v"  width="250" />
+							<audio id="0-wav_masked" style="width: 200px" controls="controls" preload="none" src="demos/ratio-50/0-Ratio-50-masked.wav"></audio>
 						</td>
 
 						<td>
-							<p> <font size="+2">AudioMAE</font> </p>
-							<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-							<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
+							<p> <font size="+2">SpecMAE</font> </p>
+							<img id="0-img_spec" src="demos/ratio-50/0-Ratio-50-masked.wav.svg" alt="z_v"  width="250" />
+							<audio id="0-wav_spec" style="width: 200px" controls="controls" preload="none" src="demos/ratio-50/0-Ratio-50-reconstructed.wav"></audio>
 						</td>
+
 						<td>
-							<p> <font size="+2">VQSMAE</font> (ours) </p>
-							<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-							<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
+							<p> <font size="+2">SpecMAE</font> </p>
+							<img id="0-img_reconstructed" src="demos/ratio-50/0-Ratio-50-reconstructed.wav.svg" alt="z_v"  width="250" />
+							<audio id="0-wav_reconstructed" style="width: 200px" controls="controls" preload="none" src="demos/ratio-50/0-Ratio-50-reconstructed.wav"></audio>
 						</td>
 					</table>
 
 					<table style="width:100%; text-align: center;">
 						<td>
-							<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-							<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
+							<img id="1-img_original" src="demos/ratio-50/1-Ratio-50-original.wav.svg" alt="z_v"  width="250" />
+							<audio id="1-wav_original" style="width: 200px" controls="controls" preload="none" src="demos/ratio-50/1-Ratio-50-original.wav"></audio>
 						</td>
 
 						<td>
-							<img src="demos/1_sample_masked.svg" alt="z_v"  width="250" />
-							<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
+							<img id="1-img_masked" src="demos/ratio-50/1-Ratio-50-masked.wav.svg" alt="z_v"  width="250" />
+							<audio id="1-wav_masked" style="width: 200px" controls="controls" preload="none" src="demos/ratio-50/1-Ratio-50-masked.wav"></audio>
 						</td>
 
 						<td>
-							<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-							<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
+							<img id="1-img_spec" src="demos/ratio-50/1-Ratio-50-masked.wav.svg" alt="z_v"  width="250" />
+							<audio id="1-wav_spec" style="width: 200px" controls="controls" preload="none" src="demos/ratio-50/1-Ratio-50-reconstructed.wav"></audio>
 						</td>
+
 						<td>
-							<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-							<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
+							<img id="1-img_reconstructed" src="demos/ratio-50/1-Ratio-50-reconstructed.wav.svg" alt="z_v"  width="250" />
+							<audio id="1-wav_reconstructed" style="width: 200px" controls="controls" preload="none" src="demos/ratio-50/1-Ratio-50-reconstructed.wav"></audio>
 						</td>
 					</table>
 
 					<table style="width:100%; text-align: center;">
 						<td>
-							<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-							<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
+							<img id="2-img_original" src="demos/ratio-50/2-Ratio-50-original.wav.svg" alt="z_v"  width="250" />
+							<audio id="2-wav_original" style="width: 200px" controls="controls" preload="none" src="demos/ratio-50/2-Ratio-50-original.wav"></audio>
 						</td>
 
 						<td>
-							<img src="demos/1_sample_masked.svg" alt="z_v"  width="250" />
-							<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
+							<img id="2-img_masked" src="demos/ratio-50/2-Ratio-50-masked.wav.svg" alt="z_v"  width="250" />
+							<audio id="2-wav_masked" style="width: 200px" controls="controls" preload="none" src="demos/ratio-50/2-Ratio-50-masked.wav"></audio>
 						</td>
 
 						<td>
-							<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-							<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
+							<img id="2-img_spec" src="demos/ratio-50/2-Ratio-50-masked.wav.svg" alt="z_v"  width="250" />
+							<audio id="2-wav_spec" style="width: 200px" controls="controls" preload="none" src="demos/ratio-50/2-Ratio-50-reconstructed.wav"></audio>
 						</td>
+
 						<td>
-							<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-							<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
+							<img id="2-img_reconstructed" src="demos/ratio-50/2-Ratio-50-reconstructed.wav.svg" alt="z_v"  width="250" />
+							<audio id="2-wav_reconstructed" style="width: 200px" controls="controls" preload="none" src="demos/ratio-50/2-Ratio-50-reconstructed.wav"></audio>
 						</td>
 					</table>
 				</div>
 			<br>
 
-				<div style="width:100%; text-align: justify; border: 3px dashed Red;">
-						<span style="font-size: medium; color:Red;"><a name="Visual"></a><strong><font size="+2">RATIO 80%</font></strong></span>
-						<table style="width:100%; text-align: center;">
-							<td>
-								<p> <font size="+2">Original</font> </p>
-								<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-								<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
-							</td>
+				<script>
+				backButton = document.getElementById("back");
+				nextButton = document.getElementById("next");
+				number = document.getElementById("number");
+				var count = 50;
+				if (count == 50){
+					backButton.disabled = true;
+				}
 
-							<td>
-								<p> <font size="+2">Masked</font> </p>
-								<img src="demos/1_sample_masked.svg" alt="z_v"  width="250" />
-								<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
-							</td>
+				function next(){
+					count = count + 10;
+					if (count != 1){
+						backButton.disabled = false;
+					}
+					if (count == 90){
+						nextButton.disabled = true;
+					}
+					number.innerHTML = "Ratio " + count+ "%";
+					document.getElementById('0-img_original').src="demos/ratio-"+count+"/0-Ratio-"+count+"-original.wav.svg"
+					document.getElementById('0-img_masked').src="demos/ratio-"+count+"/0-Ratio-"+count+"-masked.wav.svg"
+					document.getElementById('0-img_reconstructed').src="demos/ratio-"+count+"/0-Ratio-"+count+"-reconstructed.wav.svg"
+					document.getElementById('1-img_original').src="demos/ratio-"+count+"/1-Ratio-"+count+"-original.wav.svg"
+					document.getElementById('1-img_masked').src="demos/ratio-"+count+"/1-Ratio-"+count+"-masked.wav.svg"
+					document.getElementById('1-img_reconstructed').src="demos/ratio-"+count+"/1-Ratio-"+count+"-reconstructed.wav.svg"
+					document.getElementById('2-img_original').src="demos/ratio-"+count+"/2-Ratio-"+count+"-original.wav.svg"
+					document.getElementById('2-img_masked').src="demos/ratio-"+count+"/2-Ratio-"+count+"-masked.wav.svg"
+					document.getElementById('2-img_reconstructed').src="demos/ratio-"+count+"/2-Ratio-"+count+"-reconstructed.wav.svg"
 
-							<td>
-								<p> <font size="+2">AudioMAE</font> </p>
-								<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-								<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
-							</td>
-							<td>
-								<p> <font size="+2">VQSMAE</font> (ours) </p>
-								<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-								<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
-							</td>
-						</table>
+					document.getElementById('0-wav_original').src="demos/ratio-"+count+"/0-Ratio-"+count+"-original.wav"
+					document.getElementById('0-wav_masked').src="demos/ratio-"+count+"/0-Ratio-"+count+"-masked.wav"
+					document.getElementById('0-wav_reconstructed').src="demos/ratio-"+count+"/0-Ratio-"+count+"-reconstructed.wav"
+					document.getElementById('1-wav_original').src="demos/ratio-"+count+"/1-Ratio-"+count+"-original.wav"
+					document.getElementById('1-wav_masked').src="demos/ratio-"+count+"/1-Ratio-"+count+"-masked.wav"
+					document.getElementById('1-wav_reconstructed').src="demos/ratio-"+count+"/1-Ratio-"+count+"-reconstructed.wav"
+					document.getElementById('2-wav_original').src="demos/ratio-"+count+"/2-Ratio-"+count+"-original.wav"
+					document.getElementById('2-wav_masked').src="demos/ratio-"+count+"/2-Ratio-"+count+"-masked.wav"
+					document.getElementById('2-wav_reconstructed').src="demos/ratio-"+count+"/2-Ratio-"+count+"-reconstructed.wav"
+					}
 
-						<table style="width:100%; text-align: center;">
-							<td>
-								<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-								<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
-							</td>
+				function back(){
+					count = count - 10;
+					if (count == 50){
+						backButton.disabled = true;
+					}
+					if (count < 90){
+						nextButton.disabled = false;
+					}
+					number.innerHTML = "Ratio " + count+ "%";
+					document.getElementById('0-img_original').src="demos/ratio-"+count+"/0-Ratio-"+count+"-original.wav.svg"
+					document.getElementById('0-img_masked').src="demos/ratio-"+count+"/0-Ratio-"+count+"-masked.wav.svg"
+					document.getElementById('0-img_reconstructed').src="demos/ratio-"+count+"/0-Ratio-"+count+"-reconstructed.wav.svg"
+					document.getElementById('1-img_original').src="demos/ratio-"+count+"/1-Ratio-"+count+"-original.wav.svg"
+					document.getElementById('1-img_masked').src="demos/ratio-"+count+"/1-Ratio-"+count+"-masked.wav.svg"
+					document.getElementById('1-img_reconstructed').src="demos/ratio-"+count+"/1-Ratio-"+count+"-reconstructed.wav.svg"
+					document.getElementById('2-img_original').src="demos/ratio-"+count+"/2-Ratio-"+count+"-original.wav.svg"
+					document.getElementById('2-img_masked').src="demos/ratio-"+count+"/2-Ratio-"+count+"-masked.wav.svg"
+					document.getElementById('2-img_reconstructed').src="demos/ratio-"+count+"/2-Ratio-"+count+"-reconstructed.wav.svg"
 
-							<td>
-								<img src="demos/1_sample_masked.svg" alt="z_v"  width="250" />
-								<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
-							</td>
-
-							<td>
-								<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-								<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
-							</td>
-							<td>
-								<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-								<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
-							</td>
-						</table>
-
-						<table style="width:100%; text-align: center;">
-							<td>
-								<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-								<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
-							</td>
-
-							<td>
-								<img src="demos/1_sample_masked.svg" alt="z_v"  width="250" />
-								<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
-							</td>
-
-							<td>
-								<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-								<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
-							</td>
-							<td>
-								<img src="demos/1_sample_original.svg" alt="z_v"  width="250" />
-								<audio style="width: 200px" controls="controls" preload="none" src="demos/sf_vae/controlling/whispering/spec_withf0.wav"></audio>
-							</td>
-						</table>
-					</div>
+					document.getElementById('0-wav_original').src="demos/ratio-"+count+"/0-Ratio-"+count+"-original.wav"
+					document.getElementById('0-wav_masked').src="demos/ratio-"+count+"/0-Ratio-"+count+"-masked.wav"
+					document.getElementById('0-wav_reconstructed').src="demos/ratio-"+count+"/0-Ratio-"+count+"-reconstructed.wav"
+					document.getElementById('1-wav_original').src="demos/ratio-"+count+"/1-Ratio-"+count+"-original.wav"
+					document.getElementById('1-wav_masked').src="demos/ratio-"+count+"/1-Ratio-"+count+"-masked.wav"
+					document.getElementById('1-wav_reconstructed').src="demos/ratio-"+count+"/1-Ratio-"+count+"-reconstructed.wav"
+					document.getElementById('2-wav_original').src="demos/ratio-"+count+"/2-Ratio-"+count+"-original.wav"
+					document.getElementById('2-wav_masked').src="demos/ratio-"+count+"/2-Ratio-"+count+"-masked.wav"
+					document.getElementById('2-wav_reconstructed').src="demos/ratio-"+count+"/2-Ratio-"+count+"-reconstructed.wav"
+					}
+			</script>
 
 </body>
 </html>
