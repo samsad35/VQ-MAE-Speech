@@ -75,7 +75,7 @@
 			<section class="12u">
 
 				<h2 style="text-align: center;">
-					VECTOR QUANTIZED MASKED AUTOENCODER FOR SPEECH EMOTION RECOGNITION
+					A VECTOR QUANTIZED MASKED AUTOENCODER FOR SPEECH EMOTION RECOGNITION
 				</h2>
 
 				<p style="text-align: center;">
@@ -111,7 +111,7 @@
 						</td>
 					</table>
 				</div>
-				<p style = "text-align: justify; vertical-align: top;"> Recent years have seen remarkable progress in speech emotion recognition, thanks to advances in deep learning techniques. However, the limited availability of labeled data remains a significant challenge in the field. To overcome this, self-supervised learning approaches have emerged as promising solutions. This paper focuses on self-supervised methods based on Masked AutoEncoder (MAE) to learn efficient speech representations. We propose a Vector Quantized Masked AutoEncoder (VQ-MAE-S), an adaptation of existing MAE methods for speech. By integrating the MAE into the VQ-VAE architecture, the VQ-MAE-S achieves better reconstruction quality for masked patches compared to speech MAE methods that use the L1/L2 loss function. We show that our approach, pre-trained on the VoxCeleb2 dataset and refined on emotional speech data, outperforms existing MAE methods that rely on spectrograms or mel-spectrograms as input representations.</p>
+				<p style = "text-align: justify; vertical-align: top;"> Recent years have seen remarkable progress in speech emotion recognition (SER), thanks to advances in deep learning techniques. However, the limited availability of labeled data remains a significant challenge in the field. Self-supervised learning has recently emerged as a promising solution to address this challenge. In this paper, we propose the vector quantized masked autoencoder for speech (VQ-MAE-S), a self-supervised model that is fine-tuned to recognize emotions from speech signals. The VQ-MAE-S model is based on a masked autoencoder (MAE) that operates in the discrete latent space of a vector quantized variational autoencoder. Experimental results show that the proposed VQ-MAE-S model, pre-trained on the VoxCeleb2 dataset and fine-tuned on emotional speech data, outperforms existing MAE methods that rely on speech spectrogram representations as input.</p>
 
 			<!-- VISUALISATION OF THE LEARNED LATENT SUBSPACES -->
 			<span style="font-size: large;"><a name="latentspace"></a><strong>Qualitative Results</strong></span>
@@ -126,6 +126,8 @@
 							<b id="number" style="color:#5E77E7;font-size: 20px;opacity: 0.7;">Ratio 50%</b>
 							<button id="next" onclick="next()" style="border-radius: 10px; width: 500px;font-size: 25px;}">Next</button>
 						</div>
+
+
 
 					</center>
 					<table style="width:100%; text-align: center;">
@@ -142,13 +144,13 @@
 						</td>
 
 						<td>
-							<p> <font size="+2">SpecMAE</font> </p>
+							<p> <font size="+2">SpecMAE-12</font> </p>
 							<img id="0-img_spec" src="demos/ratio-50/0-Ratio-50-masked.wav.svg" alt="z_v"  width="250" />
 							<audio id="0-wav_spec" style="width: 200px" controls="controls" preload="none" src="demos/ratio-50/0-Ratio-50-reconstructed.wav"></audio>
 						</td>
 
 						<td>
-							<p> <font size="+2">VQSMAE (ours)</font> </p>
+							<p> <font size="+2">VQ-MAE-S-12 (ours)</font> </p>
 							<img id="0-img_reconstructed" src="demos/ratio-50/0-Ratio-50-reconstructed.wav.svg" alt="z_v"  width="250" />
 							<audio id="0-wav_reconstructed" style="width: 200px" controls="controls" preload="none" src="demos/ratio-50/0-Ratio-50-reconstructed.wav"></audio>
 						</td>
